@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Atividade 1</h1>
+    <!--
+      Escreva um programa para encontrar a soma da série 1 + 11 + 1111 + ... n termos. Conforme a entrada a seguir: 
+      Exemplo da saída: 
+      Se o usuário digitar a quantidade de termos igual a 5, o resultado será: 1 + 11 + 111 + 1111 + 11111 
+      A soma é: 12345 
+    -->
+    <script>
+      let n = parseInt(window.prompt("Digite o termo:"));
+
+      let soma = 0;
+
+      let termo = 1;
+
+      let serie = "";
+
+      for (let i=1; i<=n; i++){
+          if(i>1){
+            serie += " + "
+          }
+    serie += termo;
+    soma += termo;
+    termo = termo * 10 + 1;
+}
+
+console.log(`Serie: ${serie}`);
+console.log(`Soma: ${soma}`);
+    </script>
+</body>
+</html>
